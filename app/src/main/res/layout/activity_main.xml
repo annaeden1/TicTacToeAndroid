@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteY="16dp" />
 
     <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/gridLayout"
+        android:id="@+id/grid_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -37,70 +37,59 @@
         app:rowCount="3">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_0_0"
             style="@style/button_style"
             app:layout_column="0"
             app:layout_row="0" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/button_0_1"
             style="@style/button_style"
             app:layout_column="1"
             app:layout_row="0" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/button_0_2"
             style="@style/button_style"
             app:layout_column="2"
             app:layout_row="0" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/button_1_0"
             style="@style/button_style"
             app:layout_column="0"
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/button_1_1"
             style="@style/button_style"
             app:layout_column="1"
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/button_1_2"
             style="@style/button_style"
             app:layout_column="2"
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/button_2_0"
             style="@style/button_style"
             app:layout_column="0"
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/button_2_1"
             style="@style/button_style"
             app:layout_column="1"
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/button_2_2"
             style="@style/button_style"
             app:layout_column="2"
             app:layout_row="2" />
     </androidx.gridlayout.widget.GridLayout>
-
-    <TextView
-        android:id="@+id/players_turn_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Player X's Turn"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
     <Button
         android:id="@+id/play_again_button"
@@ -116,10 +105,20 @@
 
     <TextView
         android:id="@+id/winner_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="85dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="337dp" />
+        tools:layout_editor_absoluteY="496dp" />
+
+    <TextView
+        android:id="@+id/players_turn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="441dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
