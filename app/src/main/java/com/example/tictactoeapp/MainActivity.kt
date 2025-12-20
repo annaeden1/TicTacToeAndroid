@@ -47,32 +47,28 @@ class MainActivity : ComponentActivity() {
     }
 
     fun playATurn(currentButton: Button) {
-        if (!currentButton.text.isNullOrEmpty()) {
-            // user cannot play in a non empty cell
-        } else {
-            currentButton.text = "${current_player}"
+        currentButton.text = "${current_player}"
 
-            if (checkForAWin(currentButton)) {
-              winner?.text = "${current_player} wins!"
-              play_again_button?.isEnabled = true
-              play_again_button?.setOnClickListener {
-                startANewGame()
-              }
-            } else {
-                if (checkForADraw()) {
-                    winner?.text = "It's a draw!"
-                    play_again_button?.isEnabled = true
-                    play_again_button?.setOnClickListener {
-                        startANewGame()
-                    }
-                } else {
-                    if (current_player == 'X') {
-                        current_player = 'O'
-                    } else {
-                        current_player = 'X'
-                    }
-                    playersTurn?.text = "It's ${current_player}'s turn"
+        if (checkForAWin(currentButton)) {
+          winner?.text = "${current_player} wins!"
+          play_again_button?.isEnabled = true
+          play_again_button?.setOnClickListener {
+            startANewGame()
+          }
+        } else {
+            if (checkForADraw()) {
+                winner?.text = "It's a draw!"
+                play_again_button?.isEnabled = true
+                play_again_button?.setOnClickListener {
+                    startANewGame()
                 }
+            } else {
+                if (current_player == 'X') {
+                    current_player = 'O'
+                } else {
+                    current_player = 'X'
+                }
+                playersTurn?.text = "It's ${current_player}'s turn"
             }
         }
     }
